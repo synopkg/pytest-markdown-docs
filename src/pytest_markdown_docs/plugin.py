@@ -208,7 +208,7 @@ def extract_options_from_mdx_comment(comment: str) -> typing.Set[str]:
         .replace("*/}", "")
         .replace("pmd-metadata:", "")
     )
-    return set(option.strip() for option in comment.split(",") if option)
+    return set(option.strip() for option in comment.split(" ") if option)
 
 
 def find_object_tests_recursive(
